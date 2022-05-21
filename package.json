@@ -6,7 +6,9 @@
   "author": "chanwit-y <chanwit.yimneam@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
   },
   "devDependencies": {
     "ts-node": "^10.7.0",

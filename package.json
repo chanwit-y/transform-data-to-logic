@@ -1,0 +1,15 @@
+{
+  "name": "transform-data-to-logic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chanwit-y/transform-data-to-logic.git",
+  "author": "chanwit-y <chanwit.yimneam@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}

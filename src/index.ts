@@ -1,42 +1,26 @@
-enum FlowType {
-  Declare,
-  Assign,
-  If,
-  Loop,
-}
+import { DataType, LogicFlow, FlowType } from "./@types";
+import { Flow } from "./Flow";
 
-enum DataType {
-  String,
-  Number,
-  Boolean,
-}
-
-type PrimitiveType = string | number | boolean;
-
-type Declare = {
-  name: string;
-  dataType: DataType;
-  defaultValue?: PrimitiveType;
-};
-
-type Flow = {
-  type: FlowType;
-  declare?: Declare;
-};
-
-const flows: Flow[] = [
+const flows: LogicFlow[] = [
   {
-    type: FlowType.Declare,
-    declare: {
+    type: FlowType.Variable,
+    variable: {
       name: "foo",
       dataType: DataType.String,
-      defaultValue: "test"
-    } 
+      defaultValue: "test",
+    },
   },
+  {
+    type: FlowType.ReturnVariable,
+    returnVariable: "foo"
+  }
 ];
 
 function main() {
-  console.log("Hello world");
+  const flow = new Flow(flows);
+  const result = flow.run();
+  console.log(result);
+  
 }
 
 main();
